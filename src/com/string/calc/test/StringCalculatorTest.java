@@ -4,7 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.string.calc.main.Calculator;
+import com.string.calc.main.StringCalculator;
+import com.string.calc.main.StringCalculator;
 
 class StringCalculatorTest {
 	//Task-1
