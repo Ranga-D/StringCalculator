@@ -1,19 +1,27 @@
 package com.string.calc.main;
 
 public class StringCalculator {
-	static int output_value=0;
+	static int total_value=0;
+	static String delimiter=",";
 	public static int add(String string) {
 		
 		if(string.equals("")) {
 			return 0;
 		}
 		else {
-			return sum(string);
+			String numbers[]=splitTheNumbers(string,delimiter);
+			return sum(numbers);
 		}
 	}
 
-	private static int sum(String string) {
-		output_value=Integer.parseInt(string);
-		return output_value;
+	private static String[] splitTheNumbers(String string, String delimiter2) {
+		return string.split(delimiter2);
+	}
+
+	private static int sum(String[] numbers) {
+		for(String number : numbers) {
+			total_value=total_value+Integer.parseInt(number);
+		}
+		return total_value;
 	}
 }
