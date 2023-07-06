@@ -25,4 +25,11 @@ class StringCalculatorTest {
 	void testingNumbertwo() {
 		assertEquals(3, StringCalculator.add("1,2"));
 	}
+	
+	//task-2
+	//To check if the method can handle more numbers(Allow the Add method to handle an unknown amount of numbers)
+	@Test
+	void testingMoreNumber() {
+		assertEquals(79, StringCalculator.add("1,2,56,2,1,7,6,4"));
+	}
 }
