@@ -9,7 +9,7 @@ public class StringCalculator {
 			return 0;
 		}
 		else {
-			String numbers[]=splitTheNumbers(string,delimiter);
+			String numbers[]=splitTheNumbers(string,delimiter + "|\n");
 			return sum(numbers);
 		}
 	}
@@ -17,7 +17,6 @@ public class StringCalculator {
 	private static String[] splitTheNumbers(String string, String delimiter2) {
 		return string.split(delimiter2);
 	}
-
 	private static int sum(String[] numbers) {
 		for(String number : numbers) {
 			total_value=total_value+Integer.parseInt(number);

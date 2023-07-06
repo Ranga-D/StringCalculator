@@ -26,10 +26,17 @@ class StringCalculatorTest {
 		assertEquals(3, StringCalculator.add("1,2"));
 	}
 	
-	//task-2
+	//Task-2
 	//To check if the method can handle more numbers(Allow the Add method to handle an unknown amount of numbers)
 	@Test
 	void testingMoreNumber() {
 		assertEquals(79, StringCalculator.add("1,2,56,2,1,7,6,4"));
+	}
+	
+	//Task-3
+	//to check is the add method handles extra line(Allow the Add method to handle new lines between numbers (instead of commas))
+	@Test
+	void testingAddingNUmberWithNewLine() {
+		assertEquals(6, StringCalculator.add("1\n2,3"));
 	}
 }
