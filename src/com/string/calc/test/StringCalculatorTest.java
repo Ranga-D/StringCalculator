@@ -43,6 +43,7 @@ class StringCalculatorTest {
 	//To check is the add method handle to the value("//;\n1;2")
 	@Test
 	void testingAddingNUmberWithNewLine1() {
-		assertEquals(6, StringCalculator.add("//;\\n1;2"));
+		assertEquals(3, StringCalculator.add("//;\n1;2"));
 	}
+	
 }

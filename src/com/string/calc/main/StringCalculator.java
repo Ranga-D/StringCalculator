@@ -9,6 +9,10 @@ public class StringCalculator {
 			return 0;
 		}
 		else {
+			if(string.matches("//(.*)\n(.*)")){
+				delimiter = Character.toString(string.charAt(2));
+				string = string.substring(4);
+			}
 			String numbers[]=splitTheNumbers(string,delimiter + "|\n");
 			return sum(numbers);
 		}
