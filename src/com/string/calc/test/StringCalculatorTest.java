@@ -19,5 +19,4 @@ class StringCalculatorTest {
 	void testingNumberOne() {
 		assertEquals(1, StringCalculator.add("1"));
 	}
-
 }
