@@ -45,5 +45,21 @@ class StringCalculatorTest {
 	void testingAddingNUmberWithNewLine1() {
 		assertEquals(3, StringCalculator.add("//;\n1;2"));
 	}
-	
+	//Task-5
+	//Calling Add with a negative number will throw an exception "negatives not allowed" - and the negative that was passed.
+	@Test
+	void testingWithNegativeNumbers(){
+		try {
+			StringCalculator.add("-1,2");
+			}
+		catch (IllegalArgumentException e){
+			assertEquals(e.getMessage(), "Negatives not allowed: -1");
+				}
+		try {
+			StringCalculator.add("2,-4,3,-5");
+				}
+		catch (IllegalArgumentException e){
+			assertEquals(e.getMessage(), "Negatives not allowed: -4,-5");
+				}
+	}
 }
